@@ -12,29 +12,38 @@ set nocompatible    " use vim not vi settings
 filetype off
 set history=1000    " Keeps 1000 lines of history
 set shell=bash      " 
+filetype plugin indent on
 
 " Editing
 set backspace=indent,eol,start  "set backspace function to something better
+set encoding=utf-8  " sets to UTF8
 
 " Formatting
+set autoindent      " sets autoindenting on
+set expandtab       " converts tabs to spaces
 set shiftwidth=2    " Sets the tab width to two spaces
 set tabstop=4       "
 set softtabstop=4   "
-set autoindent      " sets autoindenting on
 set numberwidth=5   "
-set showtabline=2   "
-set winwidth=75     " window width
+set encoding=utf-8  " Necessary to show unicode flyphs
 
-" UI
+" Visual and UI
 set ruler           " shows current position in bottom right
 set guioptions-=T   " Remove MacVim GUI
 set cursorline      " highlight current line
+set showtabline=2   "
 set cmdheight=2     " 2 line command
+set winwidth=75     " window width
+set laststatus=2    " Always show the command line: help PowerLine plugin
+set t_Co=256        " Explicitly tell vim the terminal supports 256 colours
 
 " Command display
 set showmode
 set showcmd
 
+" Search
+set hlsearch
+set incsearch
 
 " ****************************************************************************
 " COLORING AND SYNTAX HIGHLIGHTING
@@ -55,7 +64,11 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'  
- 
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-cucumber'
+Bundle 'Lokaltog/vim-powerline'
+
 
 
 " ****************************************************************************
@@ -120,7 +133,12 @@ vnoremap k gk
 " ****************************************************************************
 " STATUS LINE
 
-set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+" set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+" Status line is now being driven by https://github.com/Lokaltog/vim-powerline
+
+" TODO: Need a patched font to run the below with powerline
+let g:Powerline_symbols = 'unicode'
+let g:Powerline_stl_path_style = 'short' " default: relative
 
 
 " ****************************************************************************

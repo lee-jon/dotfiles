@@ -14,6 +14,15 @@
 #===========================================================================
 
 
+#--------------------------------------------------------
+# Aliases for development 
+#--------------------------------------------------------
+
+alias v='vim'               # quick access to Vim
+alias ga='git add'          # add files to repo
+alias gm='git commit -m'    # commit to repo
+alias gc='git checkout -b'  # checkout new branch
+
 
 #--------------------------------------------------------
 # Aliases around 'ls' family of commands
