@@ -16,11 +16,10 @@ navidate to the directory and install the files to your home directory by runnin
 ## Files
 
 ### Bash
-.bashrc
-.bash\_profile
+`.bashrc`
+`.bash\_profile`
 
 ### VIM
 Vim uses Vundle plug-in manager. Install vundle first before using the `.vimrc` file.
 
 A couple of lines are for the solarized colour scheme.
-
