@@ -83,7 +83,7 @@ ROOT_AT='root@'
 fi
 case ${TERM} in
         vt100)
-PS1='[\u@${PROMPT_HOSTNAME} \w]\n \#\$ '
+PS1='[\u@${PROMPT_HOSTNAME}\w]\n \#\$ '
         ;;
         *)
 PS1='[\e[${PROMPT_HOST_COLOR}\[${ROOT_AT}\h:\[\e[${PROMPT_DIR_COLOR}\]\W\[\$\e[m]\n$ ' 
