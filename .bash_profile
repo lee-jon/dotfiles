@@ -7,4 +7,3 @@ if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 HISTFILESIZE=1000000000
 HISTSIZE=1000000
 
-# Load RVM function

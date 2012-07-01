@@ -68,6 +68,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/nerdtree'
 
 
 
@@ -146,3 +147,23 @@ let g:Powerline_stl_path_style = 'short' " default: relative
 " from https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
 
 command! InsertTime :normal a<c-r>=strftime('%F %H:%M:%S.0 %z')<cr>
+
+
+" ****************************************************************************
+" NerdTree Plugin - open nerdtree if no file is specified
+" from srooloose/nerdtree
+autocmd vimenter * if !argc() | NERDTree | endif
+
+
+" ****************************************************************************
+" Strip trailing whitespace
+
+function! <SID>StripTrailingWhitespaces()
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  let @/=_s
+  call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
