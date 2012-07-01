@@ -2,6 +2,9 @@
 
 require 'rake'
 
+# git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+
 desc "install the dot files to the user's home directory"
 task :install do
   replace_all = false

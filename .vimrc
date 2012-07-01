@@ -35,7 +35,6 @@ set showtabline=2   "
 set cmdheight=2     " 2 line command
 set winwidth=75     " window width
 set laststatus=2    " Always show the command line: help PowerLine plugin
-set t_Co=256        " Explicitly tell vim the terminal supports 256 colours
 
 " Command display
 set showmode
@@ -51,6 +50,8 @@ set incsearch
 
 syntax enable
 set background=dark
+set t_Co=16
+let g:solarized_termcolors=16
 colorscheme solarized
 
 
