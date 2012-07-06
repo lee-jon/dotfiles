@@ -11,7 +11,7 @@
 set nocompatible    " use vim not vi settings
 filetype off
 set history=1000    " Keeps 1000 lines of history
-set shell=bash      " 
+set shell=bash      "
 filetype plugin indent on
 
 " Editing
@@ -64,13 +64,13 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'vim-ruby/vim-ruby'  
+Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
-
+Bundle 'lee-jon/vim-io'
 
 
 " ****************************************************************************
@@ -90,7 +90,7 @@ augroup vimrcEx
   autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
   autocmd FileType python set sw=4 sts=4 et
 
-  autocmd! BufRead,BufNewFile *.sass setfiletype sass 
+  autocmd! BufRead,BufNewFile *.sass setfiletype sass
   autocmd BufRead *.md        set ai formatoptions=tcroqn2 comments=n:&gt;
   autocmd BufRead *.mkd       set ai formatoptions=tcroqn2 comments=n:&gt;
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
@@ -106,12 +106,13 @@ augroup vimrcEx
   " detect filetypes
   au BufRead,BufNewFile {*.md,*.mkd,*.markdown}              set ft=markdown
   au BufRead,BufNewFile {Cap,Gem,Vagrant}file,.autotest,*.ru set ft=ruby
-  au BufRead,BufNewFile *.rake                               set ft=ruby 
+  au BufRead,BufNewFile *.rake                               set ft=ruby
   au BufRead,BufNewFile Procfile,.bundle/config,.gemrc       set ft=yaml
   au BufRead,BufNewFile *.sbt                                set ft=scala
   au BufRead,BufNewFile *.json                               set ft=javascript
   au BufRead,BufNewFile *.hkl                                set ft=haskell
-  au BufRead,BufNewFile {COMMIT_EDITMSG}                     set ft=gitcommit 
+  au BufRead,BufNewFile {COMMIT_EDITMSG}                     set ft=gitcommit
+  au BufRead,BufNewFile *.io                                 set ft=io
 augroup END
 
 
