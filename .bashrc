@@ -1,11 +1,8 @@
-
 #===========================================================================
 # .bashrc File to be used in your $HOME/.bashrc
 # 
 # By Lee-Jon Ball, but heavily borrowing from everywhere
 #
-# This is in use on a MacBook OSX Lion and Ubuntu 12.07
-# It assumes a GNU like environment - not BSD (OSX)
 #
 # http://tldp.org/LDP/abs/html/index.html
 # http://www.caliban.org/bash/
@@ -13,6 +10,11 @@
 # http://www.dotfiles.org/
 #===========================================================================
 
+
+#--------------------------------------------------------
+# Common environments variables
+#--------------------------------------------------------
+export EDITOR="/usr/bin/vim"
 
 #--------------------------------------------------------
 # Aliases for development 
@@ -64,13 +66,11 @@ alias tweet='t update'
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 
-
-
 #--------------------------------------------------------
 # Prompt definition
 #--------------------------------------------------------
 
-PROMPT_HOSTNAME='bash'
+PROMPT_HOSTNAME='ubuntu'
 PROMPT_HOST_COLOR='1;31m'
 PROMPT_DIR_COLOR='1;34m'
 PROMPT_DEF_COLOR='0;39m'
@@ -83,10 +83,10 @@ ROOT_AT='root@'
 fi
 case ${TERM} in
         vt100)
-PS1='[\u@${PROMPT_HOSTNAME}\w]\n \#\$ '
+PS1='[\u@${PROMPT_HOSTNAME}\w]\n \#\$'
         ;;
-        *)
-PS1='[\e[${PROMPT_HOST_COLOR}\[${ROOT_AT}\h:\[\e[${PROMPT_DIR_COLOR}\]\W\[\$\e[m]\n$ ' 
+       *)
+PS1='[\e[${PROMPT_HOST_COLOR}\[${ROOT_AT}\h:\[\e[${PROMPT_DIR_COLOR}\]\W\[\$\e[m]\n$'
         ;;
 esac
 
