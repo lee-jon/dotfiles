@@ -1,6 +1,6 @@
 #===========================================================================
 # .bashrc File to be used in your $HOME/.bashrc
-# 
+#
 # By Lee-Jon Ball, but heavily borrowing from everywhere
 #
 #
@@ -11,20 +11,32 @@
 #===========================================================================
 
 
+
+#--------------------------------------------------------
+# Aliases
+#--------------------------------------------------------
+
+alias cls='clear'           # DOS is ingrained in me
+
+
+
 #--------------------------------------------------------
 # Common environments variables
 #--------------------------------------------------------
 export EDITOR="/usr/bin/vim"
 
 #--------------------------------------------------------
-# Aliases for development 
+# Aliases for development
 #--------------------------------------------------------
 
 alias v='vim'               # quick access to Vim
-alias ga='git add'          # add files to repo
+alias ga='git add .'        # add files to repo
 alias gm='git commit -m'    # commit to repo
-alias gc='git checkout -b'  # checkout new branch
+alias gc='git checkout'     # checkout branch
 
+alias be='bundle exec'      # bundler with options:
+alias ber='bundle exec rspec'              # rspec
+alias bec='bundle exec cucumber'           # cukes
 
 #--------------------------------------------------------
 # Aliases around 'ls' family of commands
@@ -85,8 +97,8 @@ case ${TERM} in
         vt100)
 PS1='[\u@${PROMPT_HOSTNAME}\w]\n \#\$'
         ;;
-       *)
-PS1='[\e[${PROMPT_HOST_COLOR}\[${ROOT_AT}\h:\[\e[${PROMPT_DIR_COLOR}\]\W\[\$\e[m]\n$'
+        *)
+PS1='[\e[${PROMPT_HOST_COLOR}\[${ROOT_AT}\h:\[\e[${PROMPT_DIR_COLOR}\]\W\[\$\e[m]\n$ '
         ;;
 esac
 
