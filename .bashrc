@@ -30,7 +30,7 @@ alias cls='clear'           # DOS is ingrained in me
 alias v='vim'               # quick access to Vim
 alias ga='git add .'        # add files to repo
 alias gm='git commit -m'    # commit to repo
-alias gc='git checkout'     # checkout branch
+alias gco='git checkout'     # checkout branch
 
 alias be='bundle exec'      # bundler with options:
 alias ber='bundle exec rspec'              # rspec

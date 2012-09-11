@@ -27,6 +27,8 @@ set softtabstop=4   "
 set numberwidth=5   "
 set encoding=utf-8  " Necessary to show unicode flyphs
 
+set nrformats=      " sets number formats to decimal for CTRL-A
+
 " Visual and UI
 set ruler           " shows current position in bottom right
 set guioptions-=T   " Remove MacVim GUI
@@ -68,6 +70,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-commentary'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'lee-jon/vim-io'
