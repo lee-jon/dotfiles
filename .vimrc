@@ -71,6 +71,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-commentary'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'lee-jon/vim-io'
@@ -113,6 +114,7 @@ augroup vimrcEx
   au BufRead,BufNewFile Procfile,.bundle/config,.gemrc       set ft=yaml
   au BufRead,BufNewFile *.sbt                                set ft=scala
   au BufRead,BufNewFile *.json                               set ft=javascript
+  au BufRead,BufNewFile *.coffee                             set ft=coffee
   au BufRead,BufNewFile *.hkl                                set ft=haskell
   au BufRead,BufNewFile {COMMIT_EDITMSG}                     set ft=gitcommit
   au BufRead,BufNewFile *.io                                 set ft=io
