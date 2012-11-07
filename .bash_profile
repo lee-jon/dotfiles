@@ -7,3 +7,6 @@ if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 HISTFILESIZE=1000000000
 HISTSIZE=1000000
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
