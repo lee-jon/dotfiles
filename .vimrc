@@ -1,7 +1,5 @@
-" File: .vimrc
+" File:   .vimrc
 " Author: Lee-Jon Ball
-" Edited: 2012-06-16 07:21:04.0 +0100
-"
 
 
 " ****************************************************************************
@@ -25,7 +23,7 @@ set shiftwidth=2    " Sets the tab width to two spaces
 set tabstop=4       "
 set softtabstop=4   "
 set numberwidth=5   "
-set encoding=utf-8  " Necessary to show unicode flyphs
+set encoding=utf-8  " Necessary to show unicode glyphs
 
 set nrformats=      " sets number formats to decimal for CTRL-A
 
@@ -75,7 +73,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'lee-jon/vim-io'
-
+Bundle 'vim-scripts/taglist.vim'
 
 " ****************************************************************************
 " AUTOCMDs
@@ -160,6 +158,15 @@ command! InsertTime :normal a<c-r>=strftime('%F %H:%M:%S.0 %z')<cr>
 " NerdTree Plugin - open nerdtree if no file is specified
 " from srooloose/nerdtree
 autocmd vimenter * if !argc() | NERDTree | endif
+map <F3> :NERDTreeToggle<cr>
+
+" ****************************************************************************
+" Taglist Plugin - configuration
+" from vim-scripts/taglist.vim
+
+let Tlist_Ctags_Cmd = "ctags"  "OSX ctags on /bin/usr/ctags has been overridden
+let Tlist_WinWidth  = 50
+map <F4> :TlistToggle<cr>
 
 
 " ****************************************************************************
@@ -174,3 +181,5 @@ function! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+

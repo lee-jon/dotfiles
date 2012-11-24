@@ -16,7 +16,8 @@
 # Aliases
 #--------------------------------------------------------
 
-alias cls='clear'           # DOS is ingrained in me
+alias o='open'             # For fast term to GUI switch
+alias cls='clear'          # DOS is ingrained in me
 
 
 
