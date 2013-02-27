@@ -25,6 +25,9 @@ alias cls='clear'          # DOS is ingrained in me
 # Common environments variables
 #--------------------------------------------------------
 export EDITOR="/usr/bin/vim"
+export NODE_PATH="/usr/local/lib/node"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
+
 
 #--------------------------------------------------------
 # Aliases for development
@@ -34,6 +37,7 @@ alias v='vim'               # quick access to Vim
 alias ga='git add .'        # add files to repo
 alias gm='git commit -m'    # commit to repo
 alias gco='git checkout'     # checkout branch
+alias gs='git status'
 
 alias be='bundle exec'      # bundler with options:
 alias ber='bundle exec rspec'              # rspec
