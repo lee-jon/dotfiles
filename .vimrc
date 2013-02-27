@@ -74,6 +74,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'lee-jon/vim-io'
 Bundle 'vim-scripts/taglist.vim'
+Bundle 'lukerandall/haskellmode-vim'
 
 " ****************************************************************************
 " AUTOCMDs
