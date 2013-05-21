@@ -20,6 +20,10 @@ navidate to the directory and install the files to your home directory by runnin
 `.bash\_profile`
 
 ### VIM
+`.vimrc`
 Vim uses Vundle plug-in manager. Install vundle first before using the `.vimrc` file.
 
 A couple of lines are for the solarized colour scheme.
+
+### TMUX
+`.tmux.conf`
