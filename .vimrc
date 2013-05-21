@@ -69,12 +69,18 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-surround'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'lee-jon/vim-io'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'lukerandall/haskellmode-vim'
+Bundle 'kien/ctrlp.vim'
+" CHECKOUT THESE PLUGINS
+" Searching in files   => AG works like grep
+" mattn/gist-vim plugin to paste from vim to gist
+" Aligning stuff. Tabular uses regex for git
 
 " ****************************************************************************
 " AUTOCMDs
