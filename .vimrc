@@ -78,6 +78,7 @@ Bundle 'lee-jon/vim-io'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'lukerandall/haskellmode-vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'sunaku/vim-ruby-minitest'
 " CHECKOUT THESE PLUGINS
 " Searching in files   => AG works like grep
 " mattn/gist-vim plugin to paste from vim to gist
