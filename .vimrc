@@ -65,6 +65,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
