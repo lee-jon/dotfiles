@@ -127,6 +127,7 @@ augroup vimrcEx
   au BufRead,BufNewFile *.hkl                                set ft=haskell
   au BufRead,BufNewFile {COMMIT_EDITMSG}                     set ft=gitcommit
   au BufRead,BufNewFile *.io                                 set ft=io
+  au BufRead,BufNewFile *.exs                                set ft=elixir
 augroup END
 
 
