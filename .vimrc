@@ -81,10 +81,8 @@ Bundle 'lukerandall/haskellmode-vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'sunaku/vim-ruby-minitest'
 Bundle 'elixir-lang/vim-elixir'
-" CHECKOUT THESE PLUGINS
-" Searching in files   => AG works like grep
-" mattn/gist-vim plugin to paste from vim to gist
-" Aligning stuff. Tabular uses regex for git
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'dharanasoft/rtf-highlight'
 
 " ****************************************************************************
 " AUTOCMDs
@@ -127,7 +125,7 @@ augroup vimrcEx
   au BufRead,BufNewFile *.hkl                                set ft=haskell
   au BufRead,BufNewFile {COMMIT_EDITMSG}                     set ft=gitcommit
   au BufRead,BufNewFile *.io                                 set ft=io
-  au BufRead,BufNewFile *.exs                                set ft=elixir
+  au BufRead,BufNewFile *.exs,*.ex                           set ft=elixir
 augroup END
 
 
@@ -195,3 +193,7 @@ endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 
+" ****************************************************************************
+" Git specific config
+
+autocmd Filetype gitcommit setlocal spell textwidth=72

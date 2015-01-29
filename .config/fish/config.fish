@@ -15,6 +15,8 @@ set fish_plugins rvm tmux brew git rails
 # Load oh-my-fish configuration.
 . $fish_path/oh-my-fish.fish
 
+# GOPATH
+set -x GOPATH $HOME/Projects/go
 
 # Aliases
 alias v='vim'

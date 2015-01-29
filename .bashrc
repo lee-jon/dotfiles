@@ -33,13 +33,14 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/shar
 # Aliases for development
 #--------------------------------------------------------
 
-alias v='vim'               # quick access to Vim
-alias ga='git add .'        # add files to repo
-alias gm='git commit -m'    # commit to repo
-alias gco='git checkout'     # checkout branch
+alias v='vim'                 # quick access to Vim
+alias ga='git add .'          # add files to repo
+alias gm='git commit'         # enter editor
+alias gco='git checkout'      # checkout branch
 alias gs='git status'
+alias gl='git log --no-merge' # Jamie's tip
 
-alias be='bundle exec'      # bundler with options:
+alias be='bundle exec'        # bundler with options:
 alias ber='bundle exec rspec'              # rspec
 alias bec='bundle exec cucumber'           # cukes
 
