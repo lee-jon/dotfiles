@@ -44,6 +44,13 @@ alias be='bundle exec'        # bundler with options:
 alias ber='bundle exec rspec'              # rspec
 alias bec='bundle exec cucumber'           # cukes
 
+# Git specific:
+. ~/.git-completion.bash
+. ~/.git-prompt.sh
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1='\[\033[36m\]\u \[\033[0;33m\]\w\[\033[0;35m\]$(__git_ps1 " (%s)")\[\e[0m\]\$ '
+
 #--------------------------------------------------------
 # Aliases around 'ls' family of commands
 #--------------------------------------------------------
@@ -88,23 +95,22 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # Prompt definition
 #--------------------------------------------------------
 
-PROMPT_HOSTNAME='ubuntu'
-PROMPT_HOST_COLOR='1;31m'
-PROMPT_DIR_COLOR='1;34m'
-PROMPT_DEF_COLOR='0;39m'
-ROOT_AT=''
-# If I am root, set the prompt to bright red
-if [ ${UID} -eq 0 ]; then
-PROMPT_HOST_COLOR='41m'
-PROMPT_DIR_COLOR='41m'
-ROOT_AT='root@'
-fi
-case ${TERM} in
-        vt100)
-PS1='[\u@${PROMPT_HOSTNAME}\w]\n \#\$'
-        ;;
-        *)
-PS1='[\e[${PROMPT_HOST_COLOR}\[${ROOT_AT}\h:\[\e[${PROMPT_DIR_COLOR}\]\W\[\$\e[m]\n$ '
-        ;;
-esac
+# PROMPT_HOST_COLOR='1;31m'
+# PROMPT_DIR_COLOR='1;34m'
+# PROMPT_DEF_COLOR='0;39m'
+# ROOT_AT=''
+# # If I am root, set the prompt to bright red
+# if [ ${UID} -eq 0 ]; then
+# PROMPT_HOST_COLOR='41m'
+# PROMPT_DIR_COLOR='41m'
+# ROOT_AT='root@'
+# fi
+# case ${TERM} in
+#         vt100)
+# PS1='[\u@${PROMPT_HOSTNAME}\w]\n \#\$'
+#         ;;
+#         *)
+# PS1='[\e[${PROMPT_HOST_COLOR}\[${ROOT_AT}\h:\[\e[${PROMPT_DIR_COLOR}\]\W\[\$\e[m]\n$ '
+#         ;;
+# esac
 
