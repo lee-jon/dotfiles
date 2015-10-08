@@ -26,6 +26,7 @@ set numberwidth=5   "
 set encoding=utf-8  " Necessary to show unicode glyphs
 
 set nrformats=      " sets number formats to decimal for CTRL-A
+set number          " turns number lines on by default
 
 " Visual and UI
 set ruler           " shows current position in bottom right
@@ -43,6 +44,9 @@ set showcmd
 " Search
 set hlsearch
 set incsearch
+
+" Leader key
+let mapleader=","
 
 " ****************************************************************************
 " COLORING AND SYNTAX HIGHLIGHTING
@@ -83,6 +87,7 @@ Bundle 'sunaku/vim-ruby-minitest'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'dharanasoft/rtf-highlight'
+Bundle 'jelera/vim-javascript-syntax'
 
 " ****************************************************************************
 " AUTOCMDs
@@ -192,6 +197,13 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
+" ****************************************************************************
+" RSpec as per thoughtbot/vim-rspec
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 " ****************************************************************************
 " Git specific config

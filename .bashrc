@@ -11,22 +11,13 @@
 #===========================================================================
 
 
-
 #--------------------------------------------------------
 # Aliases
 #--------------------------------------------------------
 
 alias o='open'             # For fast term to GUI switch
 alias cls='clear'          # DOS is ingrained in me
-
-
-
-#--------------------------------------------------------
-# Common environments variables
-#--------------------------------------------------------
-export EDITOR="/usr/bin/vim"
-export NODE_PATH="/usr/local/lib/node"
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
+alias h='history'            # easy access to history
 
 
 #--------------------------------------------------------
@@ -51,6 +42,7 @@ alias bec='bundle exec cucumber'           # cukes
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\[\033[36m\]\u \[\033[0;33m\]\w\[\033[0;35m\]$(__git_ps1 " (%s)")\[\e[0m\]\$ '
 
+
 #--------------------------------------------------------
 # Aliases around 'ls' family of commands
 #--------------------------------------------------------
@@ -69,26 +61,42 @@ alias tree='tree -Csu'       # nice alternative to 'recursive ls'
 
 
 #--------------------------------------------------------
-# Common Aliases
+# Options
 #--------------------------------------------------------
 
-alias h='history'            # easy access to history
-
-
-#--------------------------------------------------------
-# Twitter CLI
-#--------------------------------------------------------
-
-alias tu='t update'
-alias tweet='t update'
-
+HISTFILESIZE=1000000000 # Increase size of history
+HISTSIZE=1000000
 
 
 #--------------------------------------------------------
-# PATHs
+# PATHs & Environment Variables
 #--------------------------------------------------------
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export EDITOR="/usr/bin/vim"
+
+### Node.js
+export NODE_PATH="/usr/local/lib/node"
+export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+### Go Lang
+export GOPATH=$HOME/Projects/go
+export PATH=$PATH:$GOPATH/bin
+
+### Ruby RVM
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+### Specify defaults for homebrew cask
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+### EC2 CLI
+export JAVA_HOME=$(/usr/libexec/java_home)
+export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.5.1
+export PATH=$PATH:$EC2_HOME/bin
 
 
 #--------------------------------------------------------
