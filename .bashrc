@@ -66,7 +66,12 @@ alias tree='tree -Csu'       # nice alternative to 'recursive ls'
 
 HISTFILESIZE=1000000000 # Increase size of history
 HISTSIZE=1000000
+export HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
+# The fuck
+eval "$(thefuck --alias fuck)"
 
 #--------------------------------------------------------
 # PATHs & Environment Variables
@@ -93,11 +98,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 ### Specify defaults for homebrew cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-### EC2 CLI
-export JAVA_HOME=$(/usr/libexec/java_home)
-export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.5.1
-export PATH=$PATH:$EC2_HOME/bin
-
+### Scripts on OSX
+export PATH="$PATH:$HOME/scripts/"
 
 #--------------------------------------------------------
 # Prompt definition
