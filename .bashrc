@@ -70,9 +70,6 @@ export HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
-# The fuck
-eval "$(thefuck --alias fuck)"
-
 #--------------------------------------------------------
 # PATHs & Environment Variables
 #--------------------------------------------------------
@@ -99,7 +96,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 ### Scripts on OSX
-export PATH="$PATH:$HOME/scripts/"
+export PATH="$PATH:$HOME/scripts"
 
 #--------------------------------------------------------
 # Prompt definition
@@ -124,3 +121,6 @@ export PATH="$PATH:$HOME/scripts/"
 #         ;;
 # esac
 
+
+export NVM_DIR="/Users/lee-jon/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
