@@ -15,10 +15,8 @@
 # Aliases
 #--------------------------------------------------------
 
-alias o='open'             # For fast term to GUI switch
 alias cls='clear'          # DOS is ingrained in me
 alias h='history'            # easy access to history
-
 
 #--------------------------------------------------------
 # Aliases for development
