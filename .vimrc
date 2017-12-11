@@ -77,6 +77,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-ragtag'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
@@ -89,6 +90,7 @@ Bundle 'elixir-lang/vim-elixir'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'dharanasoft/rtf-highlight'
 Bundle 'jelera/vim-javascript-syntax'
+Bundle 'mxw/vim-jsx'
 
 " ****************************************************************************
 " AUTOCMDs
@@ -113,7 +115,7 @@ augroup vimrcEx
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
 
   " Indent p tags
-  autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
+  " autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
 
   " Leave the return key alone when in command line windows, since it's used
   " to run commands there.

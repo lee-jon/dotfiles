@@ -96,6 +96,9 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 ### Scripts on OSX
 export PATH="$PATH:$HOME/scripts"
 
+### The Fuck
+eval $(thefuck --alias)
+
 #--------------------------------------------------------
 # Prompt definition
 #--------------------------------------------------------
@@ -119,6 +122,13 @@ export PATH="$PATH:$HOME/scripts"
 #         ;;
 # esac
 
+#--------------------------------------------------------
+# Run version managers
+#--------------------------------------------------------
 
+# These are run last in case anything above redefines PATH
 export NVM_DIR="/Users/lee-jon/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
