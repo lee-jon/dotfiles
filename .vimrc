@@ -91,6 +91,7 @@ Bundle 'thoughtbot/vim-rspec'
 Bundle 'dharanasoft/rtf-highlight'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'mxw/vim-jsx'
+Bundle 'exu/pgsql.vim'
 
 " ****************************************************************************
 " AUTOCMDs
