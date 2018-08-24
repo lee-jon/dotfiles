@@ -163,7 +163,7 @@ vnoremap k gk
 
 " TODO: Need a patched font to run the below with powerline
 let g:Powerline_symbols = 'unicode'
-let g:Powerline_stl_path_style = 'short' " default: relative
+let g:Powerline_stl_path_style = 'relative' " default: relative
 
 
 " ****************************************************************************
