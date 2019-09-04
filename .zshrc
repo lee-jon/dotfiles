@@ -204,7 +204,7 @@ eval "$(rbenv init -)"
 export PATH="/usr/local/opt/curl/bin:$PATH" # for curl originally
 
 # Julia Lang
-alias julia="/Applications/Julia-1.0.app/Contents/Resources/julia/bin/julia"
+alias julia="/Applications/Julia-1.2.app/Contents/Resources/julia/bin/julia"
 
 # Adventure
 alias adventure="cd ~/Projects/Adventure && ./advent"
