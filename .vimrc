@@ -71,11 +71,12 @@ set spelllang=en_gb
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/vundle' "Let Vundle manage itself
 
 Plugin 'dharanasoft/rtf-highlight'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'exu/pgsql.vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'itmammoth/run-rspec.vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'kchmck/vim-coffee-script'
@@ -231,7 +232,7 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 " uses ALE
 let g:ale_linters = {
 \   'javascript': ['eslint'],
-\   'ruby': ['rubocop'],
+\   'ruby': ['rubocop', 'brakeman'],
 \}
 let g:ale_ruby_rubocop_executable = 'bundle'
 let g:ale_linters_explicit = 1   "ensures ALE only runs specific linters
